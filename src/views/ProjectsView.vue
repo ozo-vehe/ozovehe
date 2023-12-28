@@ -29,7 +29,7 @@ const breakpoints = {
   },
   // 1024 and up
   1450: {
-    itemsToShow: 3.2,
+    itemsToShow: 3,
     snapAlign: 'start',
   },
 }
