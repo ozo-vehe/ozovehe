@@ -1,29 +1,7 @@
 <script setup>
 import doodles from '../assets/images/doodles.png';
 import bg from '../assets/images/bg.png';
-// import { ref } from 'vue';
-// import { RouterLink } from 'vue-router'
 
-// const socialImages = ref([
-//   {
-//     id: 1,
-//     name: 'linkedin',
-//     url: 'https://img.icons8.com/ios-filled/100/linkedin-2.png',
-//     href: 'https://www.linkedin.com/in/ozovehe/',
-//   },
-//   {
-//     id: 2,
-//     name: 'twitter',
-//     url: 'https://img.icons8.com/ios-filled/50/twitterx--v2.png',
-//     href: 'https://twitter.com/__ozovehe',
-//   },
-//   {
-//     id: 3,
-//     name: 'github',
-//     url: 'https://img.icons8.com/ios-filled/500/github.png',
-//     href: 'www.google.com',
-//   },
-// ]);
 </script>
 
 <template>
