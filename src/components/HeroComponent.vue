@@ -27,9 +27,9 @@ import bg from '../assets/images/bg.png';
 </script>
 
 <template>
-  <header class="h-screen flex flex-wrap items-center justify-between pr-10">
-    <div class="header_text">
-      <h1 class="poppins leading-[96px] font-bold uppercase text-[90px] mb-2 flex flex-col text-white">creative web <span
+  <header class="min-h-screen flex flex-wrap items-center justify-center gap-32 pr-10">
+    <div class="header_text w-[550px]">
+      <h1 class="poppins leading-[70px] font-bold uppercase text-[70px] mb-2 flex flex-col text-white">creative web <span
           class="text-[#00adb5]">developer</span></h1>
       <div class="social_container flex items-center gap-4 mt-6">
         <button class="bg-[#00adb5] text-white py-4 px-8 text-center rounded-3xl">Hire me</button>
@@ -39,9 +39,9 @@ import bg from '../assets/images/bg.png';
       </div>
     </div>
 
-    <div class="header_image w-[550px] h-[550px] relative overflow-hidden">
-      <img class="absolute w-[90%] top-0 right-0" :src="doodles" alt="Doodles image">
-      <img class="absolute -bottom-20 left-0" :src="bg" alt="Background image">
+    <div class="header_image w-[600px] h-[550px] relative">
+      <img class="absolute w-[100%] -top-32 right-0" :src="doodles" alt="Doodles image">
+      <img class="absolute bottom-0 left-[50%] -translate-x-[50%]" :src="bg" alt="Background image">
     </div>
   </header>
 </template>
