@@ -7,10 +7,10 @@ import bg from '../assets/images/about.png';
 <template>
   <header class="min-h-screen flex flex-wrap items-center justify-center gap-20 pr-10 py-6">
     <div class="header_text w-[45%] text-slate-200">
-      <h1 class="poppins leading-none font-bold text-[64px] mb-2 capitalize text-white">about <span
+      <h1 class="poppins leading-none font-bold text-[54px] mb-2 capitalize text-slate-100">about <span
           class="text-[#00adb5] lowercase">me</span></h1>
       <div class="social_container flex items-center gap-4 mt-6">
-        <p class="leading-8 text-[20px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis modi blanditiis repellat consequatur ipsa, dolores tenetur asperiores error similique odio laborum magni sequi sint molestiae sunt!</p>
+        <p class="leading-8 text-[20px] text-slate-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis modi blanditiis repellat consequatur ipsa, dolores tenetur asperiores error similique odio laborum magni sequi sint molestiae sunt!</p>
       </div>
     </div>
 

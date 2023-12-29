@@ -7,7 +7,7 @@ import bg from '../assets/images/bg.png';
 <template>
   <header class="min-h-screen flex flex-wrap items-center justify-center gap-32 pr-10">
     <div class="header_text w-[550px]">
-      <h1 class="poppins leading-[70px] font-bold uppercase text-[70px] mb-2 flex flex-col text-white">creative web <span
+      <h1 class="poppins leading-[70px] font-bold uppercase text-[70px] mb-2 flex flex-col text-slate-100">creative web <span
           class="text-[#00adb5]">developer</span></h1>
       <div class="social_container flex items-center gap-4 mt-6">
         <button class="bg-[#00adb5] text-white py-4 px-8 text-center rounded-3xl">Hire me</button>

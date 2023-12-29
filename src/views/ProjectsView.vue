@@ -86,7 +86,7 @@ const displayed_projects = computed(() => {
 <template>
   <section class="projects h-screen overflow-hidden pr-10 w-full">
     <div class="project_header">
-      <h2 class="mt-10 text-[64px] leading-normal text-white font-bold">My <span class="text-[#00adb5]">projects</span>
+      <h2 class="mt-10 text-[54px] leading-normal text-slate-100 font-bold">My <span class="text-[#00adb5]">projects</span>
       </h2>
 
       <div class="project_categories flex gap-4 items-center my-10 font-bold">

@@ -28,7 +28,7 @@ const socialImages = ref([
 <template>
   <header class="min-h-screen flex flex-wrap items-center justify-center gap-20 pr-10 py-6">
     <div class="header_image w-[500px] h-[600px] relative">
-      <h1 class="poppins leading-none font-bold text-[54px] mb-2 capitalize text-white">Got a project in <span
+      <h1 class="poppins leading-none font-bold text-[54px] mb-2 capitalize text-slate-100">Got a project in <span
           class="text-[#00adb5] lowercase">mind?</span>
       </h1>
 
