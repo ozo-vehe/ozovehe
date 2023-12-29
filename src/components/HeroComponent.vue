@@ -40,7 +40,7 @@ import bg from '../assets/images/bg.png';
     </div>
 
     <div class="header_image w-[600px] h-[550px] relative">
-      <img class="absolute w-[100%] -top-32 right-0" :src="doodles" alt="Doodles image">
+      <img class="absolute w-[100%] -top-24 right-0" :src="doodles" alt="Doodles image">
       <img class="absolute bottom-0 left-[50%] -translate-x-[50%]" :src="bg" alt="Background image">
     </div>
   </header>
