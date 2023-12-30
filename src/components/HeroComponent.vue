@@ -10,8 +10,8 @@ import bg from '../assets/images/bg.png';
       <h1 class="poppins leading-[70px] font-bold uppercase text-[70px] mb-2 flex flex-col text-slate-100">creative web <span
           class="text-[#00adb5]">developer</span></h1>
       <div class="social_container flex items-center gap-4 mt-6">
-        <button class="bg-[#00adb5] text-white py-4 px-8 text-center rounded-3xl">Hire me</button>
-        <button class="bg-[#393e46bf] text-white py-4 px-8 rounded-3xl flex items-center justify-center gap-2">Download CV
+        <RouterLink to="/contact" class="bg-[#00adb5] text-white py-4 px-8 text-center rounded-3xl">Hire me</RouterLink>
+        <button class="bg-[#393e46bf] hover:bg-[#393e46] transition-all duration-300 text-white py-4 px-8 rounded-3xl flex items-center justify-center gap-2">Download CV
           <img class="w-5 h-5" src="https://img.icons8.com/fluency-systems-filled/ffffff/96/download.png"
             alt="download" /></button>
       </div>
