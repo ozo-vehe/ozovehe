@@ -5,7 +5,7 @@ import bg from '../assets/images/bg.png';
 </script>
 
 <template>
-  <header class="min-h-screen flex flex-wrap items-center justify-center gap-32 pr-10">
+  <header class="min-h-screen flex flex-wrap items-center justify-center gap-x-32 gap-y-10 pr-10 py-10">
     <div class="header_text w-[550px]">
       <h1 class="poppins leading-[70px] font-bold uppercase text-[70px] mb-2 flex flex-col text-slate-100">creative web <span
           class="text-[#00adb5]">developer</span></h1>
@@ -18,10 +18,58 @@ import bg from '../assets/images/bg.png';
     </div>
 
     <div class="header_image w-[600px] h-[550px] relative">
-      <img class="absolute w-[100%] -top-24 right-0" :src="doodles" alt="Doodles image">
+      <img class="absolute w-[100%] h-[100%] -top-24 right-0" :src="doodles" alt="Doodles image">
       <img class="absolute bottom-0 left-[50%] -translate-x-[50%]" :src="bg" alt="Background image">
     </div>
   </header>
 </template>
 
-<style scoped></style>
+<style scoped>
+@media screen and (max-width: 1400px) {
+  .header_text {
+    width: 400px;
+  }
+  .header_text h1 {
+    font-size: 54px;
+    line-height: 1.2;
+  }
+  .header_image {
+    width: 400px;
+    height: 450px;
+  }
+  img[alt="Doodles image"] {
+    top: 0px;
+  }
+  img[alt="Background image"] {
+    bottom: 10px;
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding: 30px 40px 10px;
+    display: block;
+    min-height: calc(100vh - 100px);
+    margin: 0px;
+  }
+  .header_text {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  .header_text h1 {
+    line-height: 1.2;
+  }
+  .header_image {
+    width: 100%;
+    height: 430px;
+  }
+  img[alt="Doodles image"] {
+    top: 0px;
+  }
+  img[alt="Background image"] {
+    bottom: 0px;
+    width: 70%;
+  }
+}
+</style>

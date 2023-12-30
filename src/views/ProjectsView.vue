@@ -89,7 +89,7 @@ const displayed_projects = computed(() => {
       <h2 class="mt-10 text-[54px] leading-normal text-slate-100 font-bold">My <span class="text-[#00adb5]">projects</span>
       </h2>
 
-      <div class="project_categories flex gap-4 items-center my-10 font-bold">
+      <div class="project_categories flex flex-wrap gap-4 items-center my-10 font-bold">
         <button
           class="important text-center px-8 py-3 capitalize rounded-[16px] text-white hover:cursor-pointer hover:bg-[#00adb5] transition-all duration-300"
           :class="{ 'bg-[#00adb5]': active_project === 'important', 'bg-[#393e4680] backdrop-blur-sm': active_project !== 'important' }"
@@ -147,5 +147,26 @@ const displayed_projects = computed(() => {
 
 .slide-fade-enter-active {
   transition: all 1s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    padding: 30px 40px 10px;
+    min-height: calc(100vh - 100px);
+  }
+  .project_header h2 {
+    line-height: 1.2;
+    font-size: 46px;
+    margin: 0px;
+  }
+  .project_categories {
+    gap: 30px;
+    margin-top: 20px;
+  }
+  .project_categories button {
+    font-size: 14px;
+    min-width: 100px;
+    padding: 15px 20px;
+  }
 }
 </style>

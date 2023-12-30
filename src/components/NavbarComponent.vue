@@ -39,10 +39,44 @@ import { RouterLink } from 'vue-router'
       </li>
     </ul>
   </nav>
+
+  <nav class="nav_menu_mobile bg-[#222831] relative h-[95px] z-10 w-full px-4 border-b-2 border-[#393e46bf]">
+    <ul class="mobile_menu flex items-center justify-center py-6 w-full gap-8">
+      <li class="py-3 rounded-md overflow-hidden">
+        <RouterLink to="/" :class="{ 'bg-[#00adb5] text-slate-300': $route.path === '/' }" class="text-center p-3 text-slate-300 hover:bg-[#00adb5] transition-all duration-300">
+          <span class="text-[16px] font-bold">Home</span>
+        </RouterLink>
+      </li>
+
+      
+      <li class="py-3 rounded-md overflow-hidden">
+        <RouterLink to="/about" :class="{ 'bg-[#00adb5] text-slate-300': $route.path === '/about' }" class="text-center p-3 text-slate-300 hover:bg-[#00adb5] transition-all duration-300">
+          <span class="text-[16px] font-bold">About</span>
+        </RouterLink>
+      </li>
+
+      
+      <li class="py-3 rounded-md overflow-hidden">
+        <RouterLink to="/projects" :class="{ 'bg-[#00adb5] text-slate-300': $route.path === '/projects' }" class="text-center p-3 text-slate-300 hover:bg-[#00adb5] transition-all duration-300">
+          <span class="text-[16px] font-bold">Projects</span>
+        </RouterLink>
+      </li>
+
+      
+      <li class="py-3 rounded-md overflow-hidden">
+        <RouterLink to="/contact" :class="{ 'bg-[#00adb5] text-slate-300': $route.path === '/contact' }" class="text-center p-3 text-slate-300 hover:bg-[#00adb5] transition-all duration-300">
+          <span class="text-[16px] font-bold">Contact</span>
+        </RouterLink>
+      </li>
+    </ul>
+  </nav>
 </template>
 
 
 <style scoped>
+.nav_menu_mobile {
+  display: none;
+}
 .nav_menu * {
   margin: 0;
   padding: 0;
@@ -119,4 +153,14 @@ img {
 .nav_menu a:focus span {
   display: none;
   color: #fff;
-}</style>
+}
+
+@media screen and (max-width: 768px) {
+  .nav_menu {
+    display: none;
+  }
+  .nav_menu_mobile {
+    display: flex;
+  }
+}
+</style>

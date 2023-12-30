@@ -59,7 +59,7 @@ const socialImages = ref([
         <button type="submit" class="px-6 py-3 border border-[#00adb5] mt-4 rounded-xl bg-[#00adb5] hover:bg-[#27878c] transition-all duration-300">Send message</button>
       </form>
 
-      <div class="social_icons mt-4">
+      <div class="social_icons mt-6">
         <div class="social_container flex items-center gap-4">
           <a v-for="social in socialImages" :key="social.id" :href="social.href" target="_blank">
             <img class="w-10 bg-[#393E46] rounded-full p-[11px]" :src="social.url" :alt="social.name" />
@@ -70,4 +70,26 @@ const socialImages = ref([
   </header>
 </template>
 
-<style scoped></style>
+<style scoped>
+@media screen and (max-width: 768px) {
+  header {
+    padding: 30px 40px 10px;
+    min-height: calc(100vh - 100px);
+  }
+  .header_text {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  .header_image h1 {
+    line-height: 1.2;
+    font-size: 46px;
+  }
+  .header_image {
+    width: 100%;
+    height: 550px;
+  }
+  .user_details > div {
+    width: 100%;
+  }
+}
+</style>
