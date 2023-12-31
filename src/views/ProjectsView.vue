@@ -4,6 +4,8 @@ import studdy from '../assets/images/studdy.png';
 import trivia from '../assets/images/trivia.png';
 import buildtogether from '../assets/images/build.png';
 import weather from '../assets/images/weather.png';
+import ems from '../assets/images/ems.png';
+import elma from '../assets/images/elma.png';
 import { reactive, ref, computed } from 'vue';
 // Carousel package used
 import 'vue3-carousel/dist/carousel.css';
@@ -14,6 +16,8 @@ const settings = {
   itemsToShow: 1,
   snapAlign: 'center',
 }
+
+
 // breakpoints are mobile first
 // any settings not specified will fallback to the carousel settings
 const breakpoints = {
@@ -36,16 +40,9 @@ const breakpoints = {
 // Carousel reference
 const carousel = ref(null)
 
+
 // Projects array for portfolio
 const projects = reactive([
-  {
-    name: 'studdy',
-    description: 'Creating a fun learning atmosphere for transforming your academic journey, providing a range of comprehensive services.',
-    image: studdy,
-    url: 'https://studdy-six.vercel.app/',
-    github_repo: 'https://github.com/ozo-vehe/studdy',
-    category: ['vue', 'important'],
-  },
   {
     name: 'build together',
     description: 'Empowering tech talents globally, propelling them to become drivers of innovation, success, and positive change in the tech ecosystem',
@@ -55,12 +52,20 @@ const projects = reactive([
     category: ['vue', 'important'],
   },
   {
-    name: 'trivia',
-    description: 'A simple trivia project built with html, css and vanilla JavaScript',
-    image: trivia,
+    name: 'studdy',
+    description: 'Creating a fun learning atmosphere for transforming your academic journey, providing a range of comprehensive services.',
+    image: studdy,
     url: 'https://studdy-six.vercel.app/',
     github_repo: 'https://github.com/ozo-vehe/studdy',
-    category: ['vanilla', 'important'],
+    category: ['vue'],
+  },
+  {
+    name: 'elma stores',
+    description: 'An E-commerce store built with React',
+    image: elma,
+    url: 'https://elma.vercel.app/',
+    github_repo: 'https://github.com/ozo-vehe/elma',
+    category: ['react', 'important'],
   },
   {
     name: 'react weather app',
@@ -68,7 +73,23 @@ const projects = reactive([
     image: weather,
     url: 'https://react-weather-app-ozo-vehe.vercel.app/',
     github_repo: 'https://github.com/ozo-vehe/react-weather-app',
-    category: ['react', 'important'],
+    category: ['react'],
+  },
+  {
+    name: 'employee management system',
+    description: 'The Employee Management System is a simple web-based application that simplifies employee management.',
+    image: ems,
+    url: 'https://employee-managemant-system.vercel.app/',
+    github_repo: 'https://github.com/ozo-vehe/Employee-Managemant-System',
+    category: ['vanilla', 'important'],
+  },
+  {
+    name: 'trivia',
+    description: 'A simple trivia project built with html, css and vanilla JavaScript',
+    image: trivia,
+    url: 'https://trivia-sepia.vercel.app/',
+    github_repo: 'https://github.com/ozo-vehe/trivia',
+    category: ['vanilla'],
   },
 ])
 // Current active project category
@@ -77,7 +98,6 @@ const active_project = ref('important');
 // Computed property to filter projects based on active_project
 const displayed_projects = computed(() => {
   const proj = projects.filter(project => project.category.includes(active_project.value));
-  console.log(proj);
   return proj;
 })
 
