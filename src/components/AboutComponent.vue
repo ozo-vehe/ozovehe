@@ -81,4 +81,20 @@ import bg from '../assets/images/about.png';
     width: 70%;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .header_text h1 {
+    font-size: 40px;
+  }
+  .header_text p {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .header_image {
+    height: 370px;
+  }
+  .header_image {
+    height: 370px;
+  }
+}
 </style>

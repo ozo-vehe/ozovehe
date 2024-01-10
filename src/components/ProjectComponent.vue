@@ -14,7 +14,7 @@ defineProps({
     <div
       class="-z-10 rounded-[16px] flex items-center justify-center absolute bottom-0 bg-black/70 w-full h-full scale-75 opacity-0 group-hover:z-50 group-hover:scale-100 group-hover:opacity-100 transition-all duration-500 after:absolute after:h-10 after:w-10 after:bottom-3 after:right-3 after:border-b-2 after:border-r-2 after:border-[#97989a] after:rounded-br-[16px] before:absolute before:h-10 before:w-10 before:top-3 before:left-3 before:border-t-2 before:rounded-tl-[16px] before:border-l-2 before:border-[#97989a]">
 
-      <div class="absolute text-center z-10">
+      <div class="project_details absolute text-center z-10">
         <h3 class="raleway block capitalize leading-none font-[700] text-3xl text-[#00ADB5]">
           {{ project.name }}
         </h3>
@@ -35,4 +35,26 @@ defineProps({
   </section>
 </template>
 
-<style scoped></style>
+<style scoped>
+@media screen and (max-width: 400px) {
+  .project_container {
+    width: 100vw;
+    height: 270px;
+  }
+  .project_details h3 {
+    font-size: 24px;
+  }
+  .project_details span {
+    font-size: 12px;
+    line-height: normal;
+  }
+  .project_urls {
+    margin-top: 10px;
+  }
+  .project_urls img {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+</style>

@@ -130,4 +130,20 @@ const handleSubmit = async () => {
     width: 100%;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .header_image h1 {
+    font-size: 40px;
+  }
+  .header_image {
+    width: 100%;
+    height: 450px;
+  }
+  form button {
+    font-size: 14px;
+    padding: 15px 20px;
+    min-width: 150px;
+    height: auto;
+  }
+}
 </style>

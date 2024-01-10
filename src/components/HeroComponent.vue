@@ -6,12 +6,18 @@ import bg from '../assets/images/bg.png';
 
 <template>
   <header class="min-h-screen flex flex-wrap items-center justify-center gap-x-32 gap-y-10 pr-10 py-10">
-    <div class="header_text w-[550px]">
-      <h1 class="poppins leading-[70px] font-bold uppercase text-[70px] mb-2 flex flex-col text-slate-100">creative web <span
-          class="text-[#00adb5]">developer</span></h1>
-      <div class="social_container flex items-center gap-4 mt-6">
+    <div class="header_text w-[500px]">
+      <h1 class="poppins leading-[60px] font-bold uppercase text-[60px] mb-2 text-slate-100">
+        John 
+        <span class="text-[#00adb5]">Obansa</span>
+      </h1>
+      <p class="text-slate-300 text-[24px]">
+        Sculpting seamless user journeys through the artistry of
+        <span class="text-[#00adb5]"> frontend development</span>
+      </p>
+      <div class="header_btn flex items-center gap-4 mt-6">
         <RouterLink to="/contact" class="bg-[#00adb5] text-white py-4 px-8 text-center rounded-3xl">Hire me</RouterLink>
-        <a href="https://docs.google.com/document/d/1YguHBT6OfzMZ3mQGANShgBgjFrvYrr5cQv_QiFkPdRc/view?usp=drive_link" class="bg-[#393e46bf] hover:bg-[#393e46] transition-all duration-300 text-white py-4 px-8 rounded-3xl flex items-center justify-center gap-2 cursor-pointer" target="_blank">View resume
+        <a href="https://docs.google.com/document/d/1VsukIxytDiZ_pb4bNZr7pdk3oKvwptdU-zEyQRNuHeU/view?usp=drive_link" class="bg-[#393e46bf] hover:bg-[#393e46] transition-all duration-300 text-white py-4 px-8 rounded-3xl flex items-center justify-center gap-2 cursor-pointer" target="_blank">View resume
           <img class="w-5 h-5" src="https://img.icons8.com/fluency-systems-filled/ffffff/96/download.png"
             alt="download" /></a>
       </div>
@@ -27,11 +33,14 @@ import bg from '../assets/images/bg.png';
 <style scoped>
 @media screen and (max-width: 1400px) {
   .header_text {
-    width: 400px;
+    width: 500px;
   }
   .header_text h1 {
-    font-size: 54px;
+    font-size: 50px;
     line-height: 1.2;
+  }
+  .header_text p {
+    font-size: 20px;
   }
   .header_image {
     width: 400px;
@@ -57,9 +66,6 @@ import bg from '../assets/images/bg.png';
     margin-bottom: 40px;
     width: 100%;
   }
-  .header_text h1 {
-    line-height: 1.2;
-  }
   .header_image {
     width: 100%;
     height: 430px;
@@ -70,6 +76,24 @@ import bg from '../assets/images/bg.png';
   img[alt="Background image"] {
     bottom: 0px;
     width: 70%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header_text h1 {
+    font-size: 40px;
+  }
+  .header_text p {
+    font-size: 16px;
+  }
+  .header_image {
+    height: 370px;
+  }
+  .header_btn a {
+    border-radius: 16px;
+    font-size: 14px;
+    padding: 15px 20px;
+    min-width: 100px;
   }
 }
 </style>

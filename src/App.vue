@@ -11,7 +11,7 @@ const route = useRoute();
     <img v-if="route.path === '/projects'" class="absolute top-0 left-0 w-full h-full object-cover" :src="project_bg"
       alt="">
     <NavbarComponent />
-    <div class="pl-40 router_view">
+    <div class="pl-28 router_view">
       <RouterView />
     </div>
   </main>

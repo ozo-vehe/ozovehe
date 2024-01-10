@@ -163,4 +163,14 @@ img {
     display: flex;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .mobile_menu {
+    gap: 0px;
+    justify-content: space-around;
+  }
+  li span {
+    font-size: 14px;
+  }
+}
 </style>

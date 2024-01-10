@@ -189,4 +189,16 @@ const displayed_projects = computed(() => {
     padding: 15px 20px;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .project_header h2 {
+    font-size: 40px;
+  }
+  .project_categories button {
+    font-size: 14px;
+    border-radius: 12px;
+    padding: 12px 17px;
+    min-width: 80px;
+  }
+}
 </style>
