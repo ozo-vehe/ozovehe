@@ -29,12 +29,12 @@ const slide_up = ref(false)
     </ul>
   </div>
 
-  <nav class="px-8 pt-10 sm:pt-10 md:pt-12 lg:pt-16 pb-6 sm:px-8 md:px-12 lg:px-20">
+  <nav class="px-4 pt-10 sm:pt-10 md:pt-12 lg:pt-16 pb-6 sm:px-8 md:px-12 lg:px-20">
     <div class="inconsolata flex items-center justify-between">
       <RouterLink to="/">
         <span class="text-[24px]">MyPortfolio.</span>
       </RouterLink>
-      <a href="#" class="burger" @click="slide_up = !slide_up">
+      <a href="#" class="w-[28px] h-[32px] cursor-pointer relative burger" @click="slide_up = !slide_up">
         <span> </span>
       </a>
     </div>
@@ -52,12 +52,6 @@ const slide_up = ref(false)
 }
 
 /* Burger */
-.burger {
-  width: 28px;
-  height: 32px;
-  cursor: pointer;
-  position: relative;
-}
 
 .burger:before, .burger span, .burger:after {
   width: 100%;

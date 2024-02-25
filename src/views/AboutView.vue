@@ -39,7 +39,7 @@ const socialImages = [
 </script>
 
 <template>
-  <header class="flex flex-wrap items-start justify-center gap-10 py-12 px-8 sm:px-8 md:px-12 lg:px-20">
+  <header class="flex flex-wrap items-start justify-center gap-10 py-12 px-4 sm:px-8 md:px-12 lg:px-20">
     <div class="w-full lg:w-[60%] md:w-[60%]">
       <h1 class="leading-none font-[500] text-[30px] mb-4 capitalize text-slate-700 raleway">about me</h1>
       <p class="inconsolata">
