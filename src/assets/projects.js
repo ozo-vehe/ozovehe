@@ -22,7 +22,7 @@ export const projects = [
     "image": studdy,
     "url": "https://studdy-six.vercel.app/",
     "github_repo": "https://github.com/ozo-vehe/studdy",
-    "category": ["vue"]
+    "category": ["vue", "vue router", "pinia"]
   },
   {
     "id": "9964882f-c5d8-4337-95a7-6b7387f184f0",
@@ -31,7 +31,7 @@ export const projects = [
     "image": shoopy,
     "url": "https://shoopy-two.vercel.app/",
     "github_repo": "https://github.com/ozo-vehe/shoopy",
-    "category": ["react", "next.JS", "tailwindcss", "affinidi"]
+    "category": ["react", "next.JS", "tailwind CSS", "affinidi"]
   },
   {
     "id": "173cf9e2-5333-4bec-8073-655889040170",
@@ -40,7 +40,7 @@ export const projects = [
     "image": safehealth,
     "url": "https://safehealth.vercel.app/",
     "github_repo": "https://github.com/ozo-vehe/safehealth",
-    "category": ["react", "next.JS", "tailwindcss", "affinidi"]
+    "category": ["react", "next.JS", "tailwind CSS", "affinidi"]
   },
   // {
   //   "id": "0ee0ed28-a744-4376-92a9-ec5020851a8c",

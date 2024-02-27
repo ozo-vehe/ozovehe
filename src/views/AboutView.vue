@@ -57,7 +57,7 @@ const socialImages = [
       </p>
       <button
         class="border border-slate-800 mr-4 inconsolata py-2 hover:bg-slate-800 hover:text-[#f7f7f7] transition-all duration-200 min-w-[100px] mt-6">
-        <a href="#" target="_blank" class="text-[14px] py-2 px-2">View Resume</a>
+        <a href="https://drive.google.com/file/d/1jYrSEPLK6UslZKSwv_7OyKToepemKnJb/view?usp=drive_link" target="_blank" class="text-[14px] py-2 px-2">View Resume</a>
       </button>
       <button
         class="border border-slate-800 mr-4 inconsolata py-2 hover:bg-slate-800 hover:text-[#f7f7f7] transition-all duration-200 min-w-[100px] mt-6">
