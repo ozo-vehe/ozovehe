@@ -1,11 +1,20 @@
 import studdy from '../assets/images/studdy.png';
 import trivia from '../assets/images/trivia.png';
 import buildtogether from '../assets/images/build.png';
-// import ems from '../assets/images/ems.png';
+import carefinder from '../assets/images/carefinder.png';
 import shoopy from '../assets/images/shoopy.png';
 import safehealth from '../assets/images/safehealth.png';
 
 export const projects = [
+  {
+    "id": "77b0eaff-594f-4bb9-b4e2-3691ded2d300",
+    "name": "CareFinder",
+    "description": "A powerful tool meticulously crafted designed to empower individuals to make informed decisions with a seamless experience for users seeking healthcare facilities.",
+    "image": carefinder,
+    "url": "https://carefinderapp.vercel.app/",
+    "github_repo": "https://github.com/ozo-vehe/carefinder",
+    "category": ["vue", "vue router", "pinia", "firebase", "tailwind CSS", "vitest"]
+  },
   {
     "id": "352f79c3-f96e-4790-a1e1-8867ae4692d5",
     "name": "build together",

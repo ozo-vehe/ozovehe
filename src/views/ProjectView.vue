@@ -16,7 +16,7 @@ onBeforeMount(() => {
   <section class="project px-8 pt-12 pb-6 sm:px-8 md:px-12 lg:px-20">
     <div
       class="flex flex-wrap md:flex-nowrap lg:flex-nowrap sm:flex-wrap gap-10 items-start justify-between lg:justify-between md:justify-between sm:justify-center">
-      <div class="w-full lg:w-[60%] md:w-[60%] sm:w-full" data-aos="fade-up">
+      <div class="w-full lg:w-[60%] md:w-[60%] sm:w-full border border-slate-100" data-aos="fade-up">
         <img :src="project.image" alt="Image" class="w-full">
       </div>
       <div class="w-full lg:w-[37%] md:w-[37%] sm:w-full" data-aos="fade-up" data-aos-delay="100">
