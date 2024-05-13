@@ -53,7 +53,7 @@ const handleSubmit = async () => {
 
           <div class="message mt-6">
             <label class="inconsolata text-slate-700" for="message">Message</label>
-            <textarea class="w-full h-[150px] bg-[#f5f6f7] focus:bg-[#eff1f4] px-6 py-3 mt-2 outline-none" name="message"
+            <textarea class="text-slate-700 w-full h-[150px] bg-[#f5f6f7] focus:bg-[#eff1f4] px-6 py-3 mt-2 outline-none" name="message"
               id="message" required></textarea>
           </div>
 
