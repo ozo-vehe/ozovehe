@@ -25,18 +25,9 @@ export const projects = [
     "category": ["vue", "vue router", "pinia"]
   },
   {
-    "id": "5431c6c1-acab-4bd6-bc4c-9d781d88259c",
-    "name": "studdy",
-    "description": "Creating a fun learning atmosphere for transforming your academic journey, providing a range of comprehensive services.",
-    "image": studdy,
-    "url": "https://studdy-six.vercel.app/",
-    "github_repo": "https://github.com/ozo-vehe/studdy",
-    "category": ["vue", "vue router", "pinia"]
-  },
-  {
     "id": "9964882f-c5d8-4337-95a7-6b7387f184f0",
     "name": "shoopy stores",
-    "description": "A dynamic web application designed to revolutionize your shopping experience, with the aim to provide users with a seamless and personalized journey, region-based discounts, and real-time currency exchange rate calculations.",
+    "description": "A dynamic web application designed to revolutionize your shopping experience, to provide users with a seamless and personalized journey, region-based discounts, and real-time currency exchange rate calculations.",
     "image": shoopy,
     "url": "https://shoopy-two.vercel.app/",
     "github_repo": "https://github.com/ozo-vehe/shoopy",
