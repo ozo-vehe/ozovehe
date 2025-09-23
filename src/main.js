@@ -9,11 +9,8 @@ import router from './router'
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyAR1WidAnWBRcG3s_Yt98Plk7NqjBIDtQY",
   authDomain: "johnozoveheobansa.firebaseapp.com",
@@ -26,8 +23,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const firebase_app = initializeApp(firebaseConfig);
-
-// export default analytics;
+getAnalytics(firebase_app);
 
 const app = createApp(App)
 
@@ -35,5 +31,3 @@ app.use(createPinia())
 app.use(router)
 
 app.mount('#app')
-getAnalytics(firebase_app);
-
