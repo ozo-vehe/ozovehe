@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Code, Smartphone, Globe, BriefcaseBusiness } from 'lucide-vue-next'
+import { Code, Globe, BriefcaseBusiness } from 'lucide-vue-next'
 
 const highlights = [
   {
