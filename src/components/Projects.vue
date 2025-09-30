@@ -33,7 +33,7 @@ import { ExternalLink, Github } from 'lucide-vue-next'
           <div class="p-6 lg:w-[55%] w-full project-details-container flex flex-col justify-between">
             <div class="project-details">
               <h3 class="text-xl font-bold text-gray-900 mb-3">
-                {{ project.title }} <span class="text-xs font-light">A treasury dashboard</span>
+                {{ project.title }} <span class="text-xs font-light">{{ project.subtitle }}</span>
               </h3>
               <div class="text-gray-600 mb-4">
                 <p class="mb-2">

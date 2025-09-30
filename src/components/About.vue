@@ -40,7 +40,8 @@ const highlights = [
               modern web applications and mobile solutions. I love solving complex problems and building products that
               make a difference. 
             </p>
-            <p class="lg:text-lg text-[16px] text-gray-600 font-light"> When I'm not coding, you can find me contributing to open-source projects, learning new technologies, or mentoring aspiring developers.</p>
+            <p class="lg:text-lg text-[16px] text-gray-600 font-light"> When I'm not coding, you can find me contributing to open-source projects, learning new technologies, going for long walks, playing football, or watching movies.
+            </p>
 
             <div class="socials flex items-center gap-2 font-light mt-8">
               <a href="https://github.com/ozo-vehe" target="_blank" class="uppercase">twitter</a>
