@@ -1,35 +1,39 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
+import bg02Url from '../assets/bg-02.jpg'
+import bg01Url from '../assets/bg-01.jpg'
 
 const showFirst = ref(false)
 const shrinkFirst = ref(false)
 const showSecond = ref(false)
 
 onMounted(() => {
-  // Show first section, then animate to shrink, then show second section
   showFirst.value = true
   setTimeout(() => {
     shrinkFirst.value = true
     setTimeout(() => {
       showSecond.value = true
-    }, 900) // shrink duration
-  }, 900) // initial fill duration
+    }, 900)
+  }, 900)
 })
 </script>
 
 <template>
   <section id="home" class="h-[90vh] flex items-center">
+    <!-- Preload LCP background image without layout impact -->
+    <img :src="bg02Url" alt="Preloaded background image" fetchpriority="high" decoding="async" style="position:absolute;width:0;height:0;overflow:hidden;border:0;padding:0;margin:0" aria-hidden="true" />
     <div class="w-full h-full mx-auto grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
       <transition name="hero-expand">
         <section
           v-if="showFirst"
           :class="[
-            'developer-name text-white relative bg-[url(./assets/bg-02.jpg)] flex-col flex items-center justify-center overflow-hidden transition-all duration-900 ease-in-out lg:px-10 md:px-5 px-4',
+            'developer-name text-white relative flex-col flex items-center justify-center overflow-hidden transition-all duration-900 ease-in-out lg:px-10 md:px-5 px-4',
             shrinkFirst
               ? 'lg:col-span-1 md:col-span-1 col-span-1 h-full w-full lg:w-full md:w-full'
               : 'fixed inset-0 z-40 w-screen h-screen'
           ]"
           style="transition-property: all;"
+          :style="{ backgroundImage: `url(${bg02Url})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
         >
           <div class="absolute top-0 left-0 w-full h-full bg-radial from-[#080400]/90 from-40% to-[#080400]"></div>
           <h1 class="relative text-6xl uppercase bg-radial from-gray-300 from-40% to-[#080400] bg-clip-text text-transparent hover:from-50% hover:from-gray-50 transition-all duration-300 tracking-widest">
@@ -44,7 +48,8 @@ onMounted(() => {
       <transition name="hero-fade">
         <section
           v-if="showSecond"
-          class="developer-title text-black relative bg-[url(./assets/bg-01.jpg)] h-full lg:flex md:flex hidden items-center justify-center lg:px-10 md:px-5 px-4 transition-opacity duration-700"
+          class="developer-title text-black relative h-full lg:flex md:flex hidden items-center justify-center lg:px-10 md:px-5 px-4 transition-opacity duration-700"
+          :style="{ backgroundImage: `url(${bg01Url})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
         >
           <div class="absolute top-0 left-0 w-full h-full bg-radial from-[#aec597]/80 from-20% to-[#aec597]/90"></div>
           <p class="relative lg:text-2xl md:text-xl text-[18px] bg-radial from-gray-700 from-40% to-black bg-clip-text text-transparent hover:from-50% hover:from-gray-600 transition-all duration-300 max-w-[500px]">

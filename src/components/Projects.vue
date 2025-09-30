@@ -19,8 +19,15 @@ import { ExternalLink, Github } from 'lucide-vue-next'
         <div v-for="(project, index) in projects" :key="index" class="flex flex-wrap gap-y-2 h-fit">
           <div class="image-container bg-white lg:w-[45%] w-full flex flex-col items-end justify-between p-5 h-[300px]">
             <div class="image w-[90%] m-auto h-[50%]">
-              <img :src="project.image" :alt="project.title"
-                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+              <img
+                :src="project.image"
+                :alt="project.title"
+                loading="lazy"
+                decoding="async"
+                fetchpriority="low"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
             </div>
 
             <div class="programming-languages flex justify-end gap-1 flex-wrap">

@@ -68,8 +68,9 @@ function handleSubmit(e: Event) {
               </a>
               <a href="https://x.com/__ozovehe" target="_blank" rel="noopener noreferrer"
                 class="flex items-center gap-3 p-3 rounded-lg border border-gray-200 hover:border-gray-400/50 hover:bg-gray-50 transition-all duration-300 group">
-                <!-- <ExternalLink class="w-5 h-5 text-gray-600" /> -->
-                <img class="w-5 h-5" src="https://img.icons8.com/windows/4a5565/32/twitterx.png" alt="twitterx" />
+                <svg class="w-5 h-5 text-gray-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M18.244 2H21.5l-7.5 8.573L22.5 22h-5.828l-4.57-5.506L6.9 22H3.644l8.036-9.183L2.5 2h5.914l4.123 4.977L18.244 2zm-2.044 18h1.62L7.9 4h-1.62l9.92 16z"/>
+                </svg>
                 <span class="text-sm font-medium">Twitter</span>
               </a>
             </div>
