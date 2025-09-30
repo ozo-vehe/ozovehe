@@ -5,10 +5,12 @@ import Hero from './components/Hero.vue';
 import Navbar from './components/Navbar.vue';
 import Projects from './components/Projects.vue';
 import Footer from './components/Footer.vue';
+import { Analytics } from '@vercel/analytics/vue';
 </script>
 
 <template>
   <main>
+    <Analytics />
     <Navbar />
     <Hero />
     <About />

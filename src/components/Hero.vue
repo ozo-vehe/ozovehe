@@ -31,11 +31,11 @@ onMounted(() => {
           ]"
           style="transition-property: all;"
         >
-          <div class="absolute top-0 left-0 w-full h-full bg-radial from-[#4c4c4c]/90 from-40% to-[#4c4c4c]"></div>
-          <h1 class="relative text-6xl uppercase bg-radial from-gray-200 from-70% to-[#4c4c4c] bg-clip-text text-transparent hover:from-50% hover:from-gray-50 transition-all duration-300 tracking-widest">
+          <div class="absolute top-0 left-0 w-full h-full bg-radial from-[#080400]/90 from-40% to-[#080400]"></div>
+          <h1 class="relative text-6xl uppercase bg-radial from-gray-300 from-40% to-[#080400] bg-clip-text text-transparent hover:from-50% hover:from-gray-50 transition-all duration-300 tracking-widest">
             John Obansa
           </h1>
-          <p class="relative block lg:hidden md:hidden mt-4 text-[18px] bg-radial from-gray-200 from-70% to-[#4c4c4c] bg-clip-text text-transparent hover:from-50% hover:from-gray-50 transition-all duration-300 max-w-[500px]">
+          <p class="relative block lg:hidden md:hidden mt-4 text-[18px] bg-radial from-gray-200 from-70% to-[#080400] bg-clip-text text-transparent hover:from-50% hover:from-gray-50 transition-all duration-300 max-w-[500px]">
             Crafting delightful web experiences with React, Vue.js & modern frontend tools
           </p>
         </section>
