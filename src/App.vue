@@ -2,11 +2,11 @@
 import { defineAsyncComponent, onMounted, ref } from 'vue'
 import Hero from './components/Hero.vue'
 import Navbar from './components/Navbar.vue'
+import About from './components/About.vue'
+import Projects from './components/Projects.vue'
+import Contact from './components/Contact.vue'
+import Footer from './components/Footer.vue'
 
-const About = defineAsyncComponent(() => import('./components/About.vue'))
-const Projects = defineAsyncComponent(() => import('./components/Projects.vue'))
-const Contact = defineAsyncComponent(() => import('./components/Contact.vue'))
-const Footer = defineAsyncComponent(() => import('./components/Footer.vue'))
 const showAnalytics = ref(false)
 const AsyncAnalytics = defineAsyncComponent(async () => {
   const mod = await import('@vercel/analytics/vue')
