@@ -1,92 +1,54 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ArrowDownRight, Sparkles } from 'lucide-vue-next'
+import { onMounted, ref } from 'vue'
 import bg02Url from '../assets/bg-02.jpg'
-import bg01Url from '../assets/bg-01.jpg'
 
-const showFirst = ref(false)
-const shrinkFirst = ref(false)
-const showSecond = ref(false)
+const isVisible = ref(false)
 
 onMounted(() => {
-  showFirst.value = true
-  setTimeout(() => {
-    shrinkFirst.value = true
-    setTimeout(() => {
-      showSecond.value = true
-    }, 900)
-  }, 900)
+  requestAnimationFrame(() => { isVisible.value = true })
 })
 </script>
 
 <template>
-  <section id="home" class="h-[90vh] flex items-center">
-    <!-- Preload LCP background image without layout impact -->
-    <img :src="bg02Url" alt="Preloaded background image" fetchpriority="high" decoding="async" style="position:absolute;width:0;height:0;overflow:hidden;border:0;padding:0;margin:0" aria-hidden="true" />
-    <div class="w-full h-full mx-auto grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1">
-      <transition name="hero-expand">
-        <section
-          v-if="showFirst"
-          :class="[
-            'developer-name text-white relative flex-col flex items-center justify-center overflow-hidden transition-all duration-900 ease-in-out lg:px-10 md:px-5 px-4',
-            shrinkFirst
-              ? 'lg:col-span-1 md:col-span-1 col-span-1 h-full w-full lg:w-full md:w-full'
-              : 'fixed inset-0 z-40 w-screen h-screen'
-          ]"
-          style="transition-property: all;"
-          :style="{ backgroundImage: `url(${bg02Url})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
-        >
-          <div class="absolute top-0 left-0 w-full h-full bg-radial from-[#080400]/90 from-40% to-[#080400]"></div>
-          <h1 class="relative text-6xl uppercase bg-radial from-gray-300 from-40% to-[#080400] bg-clip-text text-transparent hover:from-50% hover:from-gray-50 transition-all duration-300 tracking-widest">
-            John Obansa
-          </h1>
-          <p class="relative block lg:hidden md:hidden mt-4 text-[18px] bg-radial from-gray-200 from-70% to-[#080400] bg-clip-text text-transparent hover:from-50% hover:from-gray-50 transition-all duration-300 max-w-[500px]">
-            Crafting delightful web experiences with React, Vue.js & modern frontend tools
+  <section id="home" class="hero relative min-h-screen overflow-hidden bg-[#111111] text-[#f4f0e8]">
+    <div class="hero-grid absolute inset-0 opacity-20" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+    <img :src="bg02Url" alt="" class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-screen" aria-hidden="true" />
+    <div class="relative mx-auto flex min-h-screen max-w-[1440px] flex-col justify-end px-5 pb-10 pt-28 md:px-10 md:pb-14">
+      <div :class="['hero-copy max-w-5xl transition-all duration-1000', isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']">
+        <div class="mb-8 flex items-center gap-3 text-sm uppercase tracking-[0.24em] text-[#c9ff5a]">
+          <Sparkles class="size-4 animate-pulse" aria-hidden="true" />
+          <span>Frontend engineer / creative technologist</span>
+        </div>
+        <h1 class="max-w-6xl text-[clamp(4rem,12vw,11rem)] font-black leading-[0.82] tracking-[-0.085em]">
+          <span class="block">Ideas</span>
+          <span class="block pl-[12vw] text-[#c9ff5a]">in motion<span class="text-[#f4f0e8]">.</span></span>
+        </h1>
+        <div class="mt-10 flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+          <p class="max-w-md text-lg leading-relaxed text-[#c8c4ba] md:text-xl">
+            I turn ambitious product ideas into thoughtful, expressive digital experiences that feel as good as they work.
           </p>
-        </section>
-      </transition>
-
-      <transition name="hero-fade">
-        <section
-          v-if="showSecond"
-          class="developer-title text-black relative h-full lg:flex md:flex hidden items-center justify-center lg:px-10 md:px-5 px-4 transition-opacity duration-700"
-          :style="{ backgroundImage: `url(${bg01Url})`, backgroundSize: 'cover', backgroundPosition: 'center' }"
-        >
-          <div class="absolute top-0 left-0 w-full h-full bg-radial from-[#aec597]/80 from-20% to-[#aec597]/90"></div>
-          <p class="relative lg:text-2xl md:text-xl text-[18px] bg-radial from-gray-700 from-40% to-black bg-clip-text text-transparent hover:from-50% hover:from-gray-600 transition-all duration-300 max-w-[500px]">
-            Crafting delightful web experiences with React, Vue.js & modern frontend tools
-          </p>
-        </section>
-      </transition>
+          <a href="#projects" class="group inline-flex w-fit items-center gap-3 border-b border-[#c9ff5a] pb-2 text-sm font-bold uppercase tracking-[0.18em] text-[#c9ff5a] transition-colors hover:text-white">
+            Explore selected work
+            <ArrowDownRight class="size-5 transition-transform duration-300 group-hover:translate-x-1 group-hover:translate-y-1" aria-hidden="true" />
+          </a>
+        </div>
+      </div>
+      <div class="mt-16 flex items-center justify-between border-t border-white/20 pt-5 text-xs uppercase tracking-[0.2em] text-[#c8c4ba]">
+        <span>Based in Lagos, Nigeria</span>
+        <span class="hidden md:inline">Scroll to discover</span>
+        <span>Available for select projects</span>
+      </div>
     </div>
   </section>
 </template>
 
 <style scoped>
-.hero-expand-enter-active,
-.hero-expand-leave-active {
-  transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.hero-expand-enter-from,
-.hero-expand-leave-to {
-  opacity: 0;
-  transform: scale(1.05);
-}
-.hero-expand-enter-to,
-.hero-expand-leave-from {
-  opacity: 1;
-  transform: scale(1);
-}
-
-.hero-fade-enter-active,
-.hero-fade-leave-active {
-  transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.hero-fade-enter-from,
-.hero-fade-leave-to {
-  opacity: 0;
-}
-.hero-fade-enter-to,
-.hero-fade-leave-from {
-  opacity: 1;
-}
-</style>
+.hero-grid { background-image: linear-gradient(rgba(244,240,232,.35) 1px, transparent 1px), linear-gradient(90deg, rgba(244,240,232,.35) 1px, transparent 1px); background-size: 72px 72px; }
+.hero-orb { position: absolute; border-radius: 9999px; filter: blur(2px); opacity: .8; animation: float 10s ease-in-out infinite; }
+.hero-orb-one { width: 28rem; height: 28rem; right: -8rem; top: 10%; background: radial-gradient(circle, rgba(201,255,90,.45), transparent 68%); }
+.hero-orb-two { width: 20rem; height: 20rem; left: 32%; top: 18%; background: radial-gradient(circle, rgba(239,108,67,.32), transparent 68%); animation-delay: -4s; }
+@keyframes float { 0%, 100% { transform: translate3d(0, 0, 0) scale(1); } 50% { transform: translate3d(-20px, 24px, 0) scale(1.08); } }
+</style>6.
