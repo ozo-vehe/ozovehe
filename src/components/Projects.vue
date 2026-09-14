@@ -6,7 +6,7 @@ import { projects } from '../assets/data'
 <template>
   <section id="projects" class="bg-[#111111] py-24 text-[#f4f0e8] md:py-36">
     <div class="mx-auto max-w-[1440px] px-5 md:px-10">
-      <div data-reveal class="reveal mb-20 flex items-end justify-between gap-6">
+      <div data-reveal class="reveal mb-14 flex flex-col items-start justify-between gap-6 sm:mb-20 md:flex-row md:items-end">
         <div><p class="mb-5 text-sm font-bold uppercase tracking-[0.2em] text-[#c9ff5a]">02 / selected work</p><h2 class="text-[clamp(3rem,8vw,8rem)] font-black leading-[0.82] tracking-[-0.08em]">Things I’ve<br /><span class="text-[#c9ff5a]">made.</span></h2></div>
         <span class="hidden pb-2 text-sm uppercase tracking-[0.18em] text-white/50 md:block">Scroll / hover / explore</span>
       </div>

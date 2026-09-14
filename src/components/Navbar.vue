@@ -25,7 +25,7 @@ function closeOnEscape(event: KeyboardEvent) {
 </script>
 
 <template>
-  <header class="absolute left-0 right-0 top-0 z-50 text-[#f4f0e8]" @keydown="closeOnEscape">
+  <header class="absolute left-0 right-0 top-0 z-50 text-[#f4f0e8]" :class="{ 'bg-[#111111]/95 backdrop-blur md:bg-transparent md:backdrop-blur-none': isOpen }" @keydown="closeOnEscape">
     <div class="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-6 md:px-10">
       <a href="#home" class="text-2xl font-black tracking-[-0.08em] transition-colors hover:text-[#c9ff5a]">ozovehe<span class="text-[#c9ff5a]">.</span></a>
       <nav class="hidden items-center gap-8 md:flex" aria-label="Primary navigation">
