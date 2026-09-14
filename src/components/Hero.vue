@@ -16,7 +16,7 @@ onMounted(() => {
     <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
     <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
     <img :src="bg02Url" alt="" class="absolute inset-0 h-full w-full object-cover opacity-20 mix-blend-screen" aria-hidden="true" />
-    <div class="relative mx-auto flex min-h-screen max-w-[1440px] flex-col justify-end px-5 pb-10 pt-28 md:px-10 md:pb-14">
+    <div class="relative mx-auto flex min-h-[max(680px,100svh)] max-w-[1440px] flex-col justify-end px-5 pb-7 pt-24 sm:pb-10 md:min-h-screen md:px-10 md:pb-14 md:pt-28">
       <div :class="['hero-copy max-w-5xl transition-all duration-1000', isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0']">
         <div class="mb-8 flex items-center gap-3 text-sm uppercase tracking-[0.24em] text-[#c9ff5a]">
           <Sparkles class="size-4 animate-pulse" aria-hidden="true" />
