@@ -1,72 +1,42 @@
 <script setup lang="ts">
-import { projects } from '../assets/data';
-import { ExternalLink, Github } from 'lucide-vue-next'
+import { ExternalLink, Github, ArrowUpRight } from 'lucide-vue-next'
+import { projects } from '../assets/data'
 </script>
 
 <template>
-  <section id="projects" class="py-20 max-w-[1440px] mx-auto">
-    <div class="px-4 sm:px-5 lg:px-10">
-      <div class="mb-16">
-        <h2 class="font-bold text-gray-900 mb-2 text-right lg:text-3xl md:text-2xl text-[20px]">
-          featured <span class="underline underline-offset-8">projects</span>
-        </h2>
-        <p class="lg:text-lg text-[16px] text-gray-600 text-right">
-          Some of my recent work and side projects
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-x-8 gap-y-16">
-        <div v-for="(project, index) in projects" :key="index" class="flex flex-wrap gap-y-2 h-fit">
-          <div class="image-container bg-white lg:w-[45%] w-full flex flex-col items-end justify-between p-5 h-[300px]">
-            <div class="image w-[90%] m-auto h-[50%]">
-              <img
-                :src="project.image"
-                :alt="project.title"
-                loading="lazy"
-                decoding="async"
-                fetchpriority="low"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                class="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-
-            <div class="programming-languages flex justify-end gap-1 flex-wrap">
-              <span v-for="(tech, i) in project.technologies" :key="i"
-                class="px-2 py-1 bg-gray-50 text-gray-700 text-xs font-medium rounded-full">
-                {{ tech }}
-              </span>
-            </div>
-          </div>
-          <div class="p-6 lg:w-[55%] w-full project-details-container flex flex-col justify-between">
-            <div class="project-details">
-              <h3 class="text-xl font-bold text-gray-900 mb-3">
-                {{ project.title }} <span class="text-xs font-light">{{ project.subtitle }}</span>
-              </h3>
-              <div class="text-gray-600 mb-4">
-                <p class="mb-2">
-                  {{ project.description.main }}
-                </p>
-                <!-- <ul class="list-disc pl-5 space-y-1 text-sm">
-                  <li v-for="(bullet, i) in project.description.bullets" :key="i">
-                    {{ bullet }}
-                  </li>
-                </ul> -->
-              </div>
-            </div>
-            <div class="flex items-center space-x-4">
-              <a :href="project.github" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors duration-200">
-                <Github class="w-5 h-5 mr-2" />
-                Code
-              </a>
-              <a :href="project.url" target="_blank" rel="noopener noreferrer"
-                class="inline-flex items-center text-gray-600">
-                <ExternalLink class="w-5 h-5 mr-2" />
-                Live Demo
-              </a>
-            </div>
-          </div>
+  <section id="projects" class="bg-[#111111] py-24 text-[#f4f0e8] md:py-36">
+    <div class="mx-auto max-w-[1440px] px-5 md:px-10">
+      <div class="mb-20 flex items-end justify-between gap-6">
+        <div>
+          <p class="mb-5 text-sm font-bold uppercase tracking-[0.2em] text-[#c9ff5a]">02 / selected work</p>
+          <h2 class="text-[clamp(3rem,8vw,8rem)] font-black leading-[0.82] tracking-[-0.08em]">Things I’ve<br /><span class="text-[#c9ff5a]">made.</span></h2>
         </div>
+        <span class="hidden pb-2 text-sm uppercase tracking-[0.18em] text-white/50 md:block">Scroll / hover / explore</span>
+      </div>
+      <div class="grid gap-16 md:grid-cols-2 md:gap-x-8 md:gap-y-28">
+        <article v-for="(project, index) in projects" :key="project.title" class="group" :class="index % 2 ? 'md:mt-24' : ''">
+          <a :href="project.url.startsWith('[') ? undefined : project.url" target="_blank" rel="noopener noreferrer" class="block" :aria-label="`View ${project.title} project`">
+            <div class="relative aspect-[1.25] overflow-hidden bg-[#2a2a26]">
+              <img :src="project.image" :alt="project.title" loading="lazy" decoding="async" class="h-full w-full object-cover grayscale transition duration-700 ease-out group-hover:scale-105 group-hover:grayscale-0" />
+              <div class="absolute inset-0 bg-[#c9ff5a]/0 transition-colors duration-500 group-hover:bg-[#c9ff5a]/10"></div>
+              <div class="absolute right-5 top-5 flex size-12 translate-y-3 items-center justify-center rounded-full bg-[#c9ff5a] text-[#111111] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"><ArrowUpRight class="size-5" /></div>
+            </div>
+          </a>
+          <div class="mt-5 flex items-start justify-between gap-4 border-t border-white/20 pt-4">
+            <div>
+              <h3 class="text-2xl font-black tracking-tight">{{ project.title }}</h3>
+              <p class="mt-1 text-sm text-white/50">{{ project.subtitle || 'Digital experience' }}</p>
+            </div>
+            <div class="flex gap-3 pt-1">
+              <a v-if="project.github" :href="project.github" target="_blank" rel="noopener noreferrer" :aria-label="`${project.title} source code`" class="text-white/50 transition-colors hover:text-[#c9ff5a]"><Github class="size-5" /></a>
+              <a v-if="!project.url.startsWith('[')" :href="project.url" target="_blank" rel="noopener noreferrer" :aria-label="`${project.title} live site`" class="text-white/50 transition-colors hover:text-[#c9ff5a]"><ExternalLink class="size-5" /></a>
+            </div>
+          </div>
+          <p class="mt-4 max-w-md text-[#c8c4ba]">{{ project.description.main }}</p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span v-for="tech in project.technologies.slice(0, 4)" :key="tech" class="border border-white/20 px-2 py-1 text-[10px] uppercase tracking-[0.1em] text-white/50">{{ tech }}</span>
+          </div>
+        </article>
       </div>
     </div>
   </section>
