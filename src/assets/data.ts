@@ -57,7 +57,7 @@ export const projects: Project[] = [
 
 export const skills = ['Vue', 'React', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Product thinking', 'Accessibility', 'Analytics']
 
-export const siteUrl = 'https://ozovehe.vercel.app'
+export const siteUrl = 'https://ozovehee.vercel.app'
 
 export const socialImage = `${siteUrl}/og-image.svg`
 
