@@ -44,6 +44,17 @@ export const projects: Project[] = [
     url: 'https://terrashield.vercel.app',
   },
   {
+    title: 'Perspiq',
+    subtitle: 'AI catalog enrichment',
+    description: 'An AI-powered catalog enrichment platform that fixes the zero-results problem in fashion search by enriching product catalogs with occasion, trend, and contextual attributes shoppers actually search by, with human expert oversight for high accuracy from day one.',
+    outcome: 'Helped fashion retailers surface hidden inventory and turn more searches into filled carts.',
+    role: 'Frontend engineering, AI integration, product UI',
+    image: 'https://images.pexels.com/photos/7857496/pexels-photo-7857496.jpeg?auto=compress&cs=tinysrgb&w=1200',
+    technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'Supabase', 'Google AI SDK', 'Vercel AI SDK'],
+    github: 'https://github.com/ozo-vehe/perspiq',
+    url: 'https://perspiq.vercel.app',
+  },
+  {
     title: 'CareFinder',
     subtitle: 'Healthcare access',
     description: 'A healthcare accessibility platform tailored for Nigeria, simplifying facility discovery, data export, and secure account workflows for people seeking care.',
